@@ -4,3 +4,5 @@ function sumar(a, b = 0) {
 }
 let suma = sumar(2, 3) // 5
 console.log(suma)
+
+const sumaflecha = (a, b = 0) => a + b
