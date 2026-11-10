@@ -5,4 +5,25 @@ function sumar(a, b = 0) {
 let suma = sumar(2, 3) // 5
 console.log(suma)
 
-const sumaflecha = (a, b = 0) => a + b
+const sumaflecha = (a, b = 0) => {
+  let resultado = a + b
+  return resultado
+}
+console.log(sumaflecha(2, 3))
+
+function repetir(veces, funcion) {
+  for (let i = 0; i < veces; i++) {
+    funcion(i)
+  }
+}
+repetir(3, (i) => console.log('Repeticion', sumar(i)))
+
+function sumarTodos(limite, accion) {
+  for (let i = 0; i < limite; i++) {
+    let valorResultado = accion(i)
+  }
+}
+
+sumarTodos(3, (i) => {
+  console.log(i)
+})
