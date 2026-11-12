@@ -19,11 +19,13 @@ function repetir(veces, funcion) {
 repetir(3, (i) => console.log('Repeticion', sumar(i)))
 
 function sumarTodos(limite, accion) {
+  let resultado = 0
   for (let i = 0; i < limite; i++) {
-    let valorResultado = accion(i)
+    resultado = accion(i)
   }
+  return resultado
 }
 
-sumarTodos(3, (i) => {
-  console.log(i)
+let resultado = sumarTodos(3, (i) => {
+  return i
 })
